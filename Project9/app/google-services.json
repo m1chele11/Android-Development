@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "949726294406",
+    "firebase_url": "https://project9-4409f-default-rtdb.firebaseio.com",
+    "project_id": "project9-4409f",
+    "storage_bucket": "project9-4409f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:949726294406:android:3081e3c3b6302fbec1fc07",
+        "android_client_info": {
+          "package_name": "edu.iu.mbarrant.project9"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0y6HkdwSwKtg8K9bQGGj_0uZx6VnnCTk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/pro3_img"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true">
+    </ImageView>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="20dp"
+            android:text="Select Difficulty:"
+            android:textColor="@color/grey"
+            android:textSize="23sp"
+            android:textStyle="bold">
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:text="Select Operation:"
+            android:textColor="@color/grey"
+            android:textSize="23sp"
+            android:textStyle="bold">
+        </TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioGroup
+                android:id="@+id/difficultyRadioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="Easy"
+                android:id="@+id/startEasy"
+                android:textSize="20sp"
+                android:textStyle="bold">
+            </RadioButton>
+
+            <RadioButton
+                android:layout_width="157dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="Medium"
+                android:id="@+id/startMedium"
+                android:textSize="20sp"
+                android:textStyle="bold">
+
+            </RadioButton>
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="Hard"
+                android:id="@+id/startHard"
+                android:textSize="20sp"
+                android:textStyle="bold">
+
+            </RadioButton>
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="38dp"
+            android:orientation="vertical">
+
+            <RadioGroup
+                android:id="@+id/operatorRadioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="Addition"
+                android:id="@+id/startAddition"
+                android:textSize="20sp"
+                android:textStyle="bold">
+            </RadioButton>
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="Multiplication"
+                android:id="@+id/startMultiplication"
+                android:textSize="20sp"
+                android:textStyle="bold">
+
+            </RadioButton>
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="Division"
+                android:id="@+id/startDivision"
+                android:textSize="20sp"
+                android:textStyle="bold">
+            </RadioButton>
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="Subtraction"
+                android:id="@+id/startSubtract"
+                android:textSize="20sp"
+                android:textStyle="bold">
+            </RadioButton>
+            </RadioGroup>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Number of Questions:"
+            android:textSize="33sp"
+            android:layout_marginBottom="5dp">
+        </TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="257dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal">
+
+        <Button
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/cardview_light_background"
+            android:gravity="center_vertical"
+            android:onClick="lessQuestions"
+            android:id="@+id/lessQuestions"
+            android:text="-"
+            android:textColor="@color/grey"
+            android:textSize="35sp">
+        </Button>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/numofQuestions"
+            android:maxLines="1"
+            android:text="1"
+            android:textColor="@color/grey"
+            android:textSize="35sp"
+            android:gravity="center_vertical">
+        </TextView>
+
+        <Button
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/cardview_light_background"
+            android:onClick="moreQuestions"
+            android:text="+"
+            android:id="@+id/addQuestions"
+            android:textColor="@color/grey"
+            android:textSize="35sp"
+            android:gravity="center_vertical">
+        </Button>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:backgroundTint="@color/lightGrey"
+        android:background="@color/lightGrey">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/buttonStart"
+            android:text="START"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            android:backgroundTint="@color/lightGrey"
+            android:textColor="@color/black">
+        </Button>
+
+    </LinearLayout>
+
+</LinearLayout>

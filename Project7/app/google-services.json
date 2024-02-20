@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "525437420241",
+    "firebase_url": "https://project7-9005a-default-rtdb.firebaseio.com",
+    "project_id": "project7-9005a",
+    "storage_bucket": "project7-9005a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:525437420241:android:675f324398aaf0ab203bf0",
+        "android_client_info": {
+          "package_name": "edu.iu.mbarrant.project7"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCBpnpPmRUjE43OObrrL9lkpgVEobbZnUY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/black"
+    tools:context=".MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:padding="15dp"
+        android:layout_margin="2dp">
+
+
+        <TextView
+            android:id="@+id/resultTV"
+            android:layout_width="match_parent"
+            android:layout_height="98dp"
+            android:lines="1"
+            android:maxLines="1"
+            android:text="0"
+            android:textAlignment="textEnd"
+            android:textColor="@color/white"
+            android:textSize="60sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_margin="2dp"
+        style="@style/buttonRow">
+        <Button
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:id="@+id/buttonClear"
+            style="@style/buttonSymbol"
+            android:onClick="clearAction"
+            android:backgroundTint="@color/darkCyan"
+            android:textColor="@color/white"
+            android:text="C">
+        </Button>
+
+        <Button
+            android:layout_marginLeft="2dp"
+
+            android:layout_marginRight="2dp"
+            android:id="@+id/buttonNegate"
+            style="@style/buttonSymbol"
+            android:onClick="opAction"
+            android:backgroundTint="@color/darkCyan"
+            android:textColor="@color/white"
+            android:text="+/-">
+        </Button>
+
+        <Button
+            android:layout_marginLeft="2dp"
+
+            android:layout_marginRight="2dp"
+            android:id="@+id/buttonPercent"
+            style="@style/buttonSymbol"
+            android:onClick="opAction"
+            android:backgroundTint="@color/darkCyan"
+            android:textColor="@color/white"
+            android:text="%">
+        </Button>
+
+        <Button
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:id="@+id/buttonDivide"
+            style="@style/buttonSymbol"
+            android:onClick="opAction"
+            android:backgroundTint="@color/darkCyan"
+            android:textColor="@color/white"
+            android:text="/">
+        </Button>
+
+        <Button
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:id="@+id/buttonSin"
+            style="@style/buttonSymbol"
+            android:onClick="opAction"
+            android:backgroundTint="@color/darkCyan"
+            android:textColor="@color/white"
+            android:text="sin">
+        </Button>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_margin="2dp"
+
+        style="@style/buttonRow">
+
+        <Button
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:id="@+id/button7"
+            style="@style/buttonSymbol"
+            android:onClick="numAction"
+            android:backgroundTint="@color/lightBlack"
+            android:textColor="@color/white"
+            android:text="7">
+        </Button>
+
+        <Button
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:id="@+id/button8"
+            style="@style/buttonSymbol"
+            android:onClick="numAction"
+            android:backgroundTint="@color/lightBlack"
+            android:textColor="@color/white"
+            android:text="8">
+        </Button>
+
+        <Button
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:id="@+id/button9"
+            style="@style/buttonSymbol"
+            android:onClick="numAction"
+            android:backgroundTint="@color/lightBlack"
+            android:textColor="@color/white"
+            android:text="9">
+        </Button>
+
+        <Button
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:id="@+id/buttonTimes"
+            style="@style/buttonSymbol"
+            android:onClick="opAction"
+            android:backgroundTint="@color/darkCyan"
+            android:textColor="@color/white"
+            android:text="X">
+        </Button>
+
+        <Button
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:id="@+id/buttonCos"
+            style="@style/buttonSymbol"
+            android:onClick="opAction"
+            android:backgroundTint="@color/darkCyan"
+            android:textColor="@color/white"
+            android:text="cos">
+        </Button>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_margin="2dp"
+
+        style="@style/buttonRow">
+
+        <Button
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:id="@+id/button4"
+            style="@style/buttonSymbol"
+            android:onClick="numAction"
+            android:backgroundTint="@color/lightBlack"
+            android:textColor="@color/white"
+            android:text="4">
+        </Button>
+
+        <Button
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:id="@+id/button5"
+            style="@style/buttonSymbol"
+            android:onClick="numAction"
+            android:backgroundTint="@color/lightBlack"
+            android:textColor="@color/white"
+            android:text="5">
+        </Button>
+
+        <Button
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:id="@+id/button6"
+            style="@style/buttonSymbol"
+            android:onClick="numAction"
+            android:backgroundTint="@color/lightBlack"
+            android:textColor="@color/white"
+            android:text="6">
+        </Button>
+
+        <Button
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:id="@+id/buttonMinus"
+            style="@style/buttonSymbol"
+            android:onClick="opAction"
+            android:backgroundTint="@color/darkCyan"
+            android:textColor="@color/white"
+            android:text="-">
+        </Button>
+
+        <Button
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:id="@+id/buttonTan"
+            style="@style/buttonSymbol"
+            android:onClick="opAction"
+            android:backgroundTint="@color/darkCyan"
+            android:textColor="@color/white"
+            android:text="tan">
+        </Button>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_margin="2dp"
+
+        style="@style/buttonRow">
+
+        <Button
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:id="@+id/button1"
+            style="@style/buttonSymbol"
+            android:onClick="numAction"
+            android:backgroundTint="@color/lightBlack"
+            android:textColor="@color/white"
+            android:text="1">
+        </Button>
+
+        <Button
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:id="@+id/button2"
+            style="@style/buttonSymbol"
+            android:onClick="numAction"
+            android:backgroundTint="@color/lightBlack"
+            android:textColor="@color/white"
+            android:text="2">
+        </Button>
+
+        <Button
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:id="@+id/button3"
+            style="@style/buttonSymbol"
+            android:onClick="numAction"
+            android:backgroundTint="@color/lightBlack"
+            android:textColor="@color/white"
+            android:text="3">
+        </Button>
+
+        <Button
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:id="@+id/buttonPlus"
+            style="@style/buttonSymbol"
+            android:onClick="opAction"
+            android:backgroundTint="@color/darkCyan"
+            android:textColor="@color/white"
+            android:text="+">
+        </Button>
+
+        <Button
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:id="@+id/buttonLog"
+            style="@style/buttonSymbol"
+            android:onClick="opAction"
+            android:backgroundTint="@color/darkCyan"
+            android:textColor="@color/white"
+            android:text="log 10">
+        </Button>
+
+    </LinearLayout>
+    <LinearLayout
+        style="@style/buttonRow">
+
+        <Button
+            android:layout_marginLeft="2.5dp"
+            android:layout_marginRight="2.5dp"
+            android:id="@+id/button0"
+            style="@style/buttonSymbol"
+            android:layout_width="204dp"
+            android:layout_weight="2"
+            android:backgroundTint="@color/lightBlack"
+            android:onClick="numAction"
+            android:text="0"
+            android:textColor="@color/white" />
+
+        <Button
+            android:layout_marginLeft="2.5dp"
+            android:layout_marginRight="2.5dp"
+            android:id="@+id/buttonDecimal"
+            style="@style/buttonSymbol"
+            android:backgroundTint="@color/lightBlack"
+            android:onClick="opAction"
+            android:text="."
+            android:textColor="@color/white"></Button>
+
+        <Button
+            android:layout_marginLeft="2.5dp"
+            android:layout_marginRight="2.5dp"
+            android:id="@+id/buttonEquals"
+            style="@style/buttonSymbol"
+            android:onClick="equalsAction"
+            android:backgroundTint="@color/darkCyan"
+            android:textColor="@color/white"
+            android:text="=">
+        </Button>
+
+        <Button
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:id="@+id/buttonLn"
+            style="@style/buttonSymbol"
+            android:onClick="opAction"
+            android:backgroundTint="@color/darkCyan"
+            android:textColor="@color/white"
+            android:text="ln">
+        </Button>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

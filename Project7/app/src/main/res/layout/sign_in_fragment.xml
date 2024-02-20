@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".SignInFragment"
+    android:layout_margin="5dp">
+    <data>
+        <variable
+            name="viewModel"
+            type="edu.iu.mbarrant.project7.TasksViewModel" />
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+     <!-- Vertical orientation -->
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:text="WELCOME, SIGN IN!"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:textAlignment="center"/><!-- Center horizontally -->
+
+
+    <!-- Sign In TextView -->
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="38dp"
+        android:fontFamily="cursive"
+        android:text="Sign In"
+        android:textColor="@color/white"
+        android:textSize="30sp" />
+
+    <!-- CardView 1 -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="5dp"
+        cardCornerRadius="8dp"
+        cardElevation="8dp"
+        cardUseCompatPadding="true">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            boxStrokeWidth="0dp"
+            boxStrokeWidthFocused="0dp"
+            hintEnabled="false">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/emailEt"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:paddingTop="15dp"
+                android:background="@color/white"
+                android:hint="enter your email"
+                android:inputType="textEmailAddress"
+                android:textStyle="bold"
+                android:paddingStart="12dp"
+                android:text="@={viewModel.user.email}"/>
+        </com.google.android.material.textfield.TextInputLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- CardView 2 -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="5dp"
+        cardCornerRadius="8dp"
+        cardElevation="8dp"
+        cardUseCompatPadding="true">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            boxStrokeWidth="0dp"
+            boxStrokeWidthFocused="0dp"
+            hintEnabled="false"
+            passwordToggleEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/passEt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="15dp"
+                android:background="@color/white"
+                android:hint="enter your password"
+                android:inputType="textPassword"
+                android:textStyle="bold"
+                android:paddingStart="12dp"
+                android:text="@={viewModel.user.password}"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Next Button ImageView -->
+    <ImageView
+        android:id="@+id/nextBtn"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="12dp"
+
+        android:src="@drawable/login_24"
+        android:onClick="@{() -> viewModel.signIn()}"
+        android:contentDescription="Click to sign in" />
+
+    <!-- Not Registered Yet? TextView -->
+    <TextView
+        android:id="@+id/textview32"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:textAlignment="center"
+        android:text="Not Registered Yet?"
+        android:textSize="16sp" />
+
+    <!-- Sign Up TextView -->
+    <TextView
+        android:id="@+id/textViewSignUp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text=" Sign Up!"
+        android:textSize="16sp"
+        android:textColor="@color/Blue"
+
+        android:onClick="@{() -> viewModel.navigateToSignUp()}" />
+</LinearLayout>
+    </layout>

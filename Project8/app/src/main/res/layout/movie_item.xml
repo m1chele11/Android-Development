@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+    <data>
+        <variable
+            name="post"
+            type="edu.iu.mbarrant.project8_thor.model.Movie" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/titleTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/runtimeTV"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Movie Title"
+            />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/avatars"
+            android:contentDescription="moviePoster" />
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            style="@style/Widget.AppCompat.RatingBar.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:numStars="5"
+            android:rating="4.5"
+            android:stepSize="0.5"
+            app:layout_constraintStart_toStartOf="@+id/titleTV"
+            app:layout_constraintTop_toBottomOf="@+id/titleTV" />
+
+        <TextView
+            android:id="@+id/ratingsTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:textColor="@android:color/darker_gray"
+            app:layout_constraintBottom_toBottomOf="@+id/ratingBar"
+            app:layout_constraintStart_toEndOf="@+id/ratingBar"
+            tools:text="321 Reviews"
+            />
+
+        <TextView
+            android:id="@+id/directorTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toStartOf="@+id/titleTV"
+            app:layout_constraintTop_toBottomOf="@+id/ratingBar"
+            tools:text="Director"
+            />
+
+        <TextView
+            android:id="@+id/yearTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="@android:color/darker_gray"
+            app:layout_constraintStart_toStartOf="@+id/titleTV"
+            app:layout_constraintTop_toBottomOf="@+id/directorTV"
+            tools:text="Year"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/sharebtn"
+            app:layout_constraintStart_toStartOf="@+id/yearTV"
+            app:layout_constraintTop_toBottomOf="@+id/yearTV"
+            android:text="share"
+            android:textSize="15sp"
+            android:backgroundTint="@color/black"
+            android:textColor="@color/red">
+        </Button>
+
+        <Button
+            android:id="@+id/visitbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="96dp"
+            android:backgroundTint="@color/black"
+            android:text="Visit"
+            android:textColor="@color/red"
+            android:textSize="15sp"
+            app:layout_constraintLeft_toRightOf="@+id/sharebtn"
+            app:layout_constraintStart_toStartOf="@+id/yearTV"
+            app:layout_constraintTop_toBottomOf="@+id/yearTV">
+
+        </Button>
+
+        <TextView
+            android:id="@+id/runtimeTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/darker_gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="runtime"
+            />
+
+        <TextView
+            android:id="@+id/genreTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="@android:color/darker_gray"
+            app:layout_constraintEnd_toEndOf="@+id/runtimeTV"
+            app:layout_constraintTop_toBottomOf="@+id/runtimeTV"
+            tools:text="genre"
+            android:textColorHint="@color/black"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

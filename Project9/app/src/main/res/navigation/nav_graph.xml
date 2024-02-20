@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="edu.iu.mbarrant.project9.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_postsFragment"
+            app:destination="@id/postsFragment" >
+        </action>
+
+        <action
+            android:id="@+id/action_loginFragment_to_signupFragment"
+            app:destination="@+id/signupFragment">
+
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/signupFragment"
+        android:name="edu.iu.mbarrant.project9.SignupFragment"
+        android:label="fragment_signup"
+        tools:layout="@layout/fragment_signup" >
+        <action
+            android:id="@+id/action_signupFragment_to_postsFragment"
+            app:destination="@+id/postsFragment">
+
+        </action>
+        <action
+            android:id="@+id/action_signupFragment_to_loginInFragment"
+            app:destination="@+id/loginFragment">
+
+        </action>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/postsFragment"
+        android:name="edu.iu.mbarrant.project9.PostsFragment"
+        android:label="fragment_posts"
+        tools:layout="@layout/fragment_posts" >
+        <action
+            android:id="@+id/action_postsFragment_to_takePhotoFragment"
+            app:destination="@+id/fragmentTakePhoto"
+            app:popUpTo="@+id/postsFragment"
+            app:popUpToInclusive="true">
+        </action>
+        <action
+            android:id="@+id/action_postsFragment_to_login"
+            app:destination="@+id/loginFragment">
+        </action>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentTakePhoto"
+        android:name="edu.iu.mbarrant.project9.TakePhotoFragment"
+        android:label="fragment_pic"
+        tools:layout="@layout/fragment_take_photo">
+    </fragment>
+
+</navigation>

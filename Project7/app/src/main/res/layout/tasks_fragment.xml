@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".TasksFragment">
+    <data>
+        <variable
+            name="viewModel"
+            type="edu.iu.mbarrant.project7.TasksViewModel" />
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/purple">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Notes"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:layout_margin="5dp">
+            </TextView>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="end"> <!-- Align the buttons to the right -->
+
+                <ImageButton
+                    android:id="@+id/save_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/baseline_note_add_24"
+                    android:backgroundTint="@color/purple"
+                    android:onClick="@{() -> viewModel.onNewTaskClicked()}"
+                    android:contentDescription="Add Note" />
+
+                <ImageButton
+                    android:id="@+id/signout_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/person_24"
+                    android:backgroundTint="@color/purple"
+                    android:onClick="@{() -> viewModel.signOut()}"
+                    android:contentDescription="Signout" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/tasks_list"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="top"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="2"
+            />
+
+    </LinearLayout>
+</layout>

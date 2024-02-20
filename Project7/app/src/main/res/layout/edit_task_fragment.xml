@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".EditTaskFragment">
+    <data>
+        <variable
+            name="viewModel"
+            type="edu.iu.mbarrant.project7.TasksViewModel" />
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+        <EditText
+            android:id="@+id/task_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:minHeight="48dp"
+            android:inputType="text"
+            android:hint="Enter a task name"
+            android:text="@={viewModel.task.taskName}" />
+        <CheckBox
+            android:id="@+id/task_done"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:checked="@={viewModel.task.taskDone}" />
+        <Button
+            android:id="@+id/update_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Save Task"
+            android:onClick="@{() -> viewModel.updateTask()}" />
+
+    </LinearLayout>
+</layout>
